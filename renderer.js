@@ -1,4 +1,5 @@
 const remote = require('@electron/remote');
+const { request } = require('@octokit/request');
 try {
     // Depends on tencentcloud-sdk-nodejs version 4.0.3 or higher
     var tencentcloud = require("tencentcloud-sdk-nodejs");
@@ -330,7 +331,8 @@ window.onload = () => {
         })
         loadConfig();
         //#endregion config栏
-
+        //检查版本
+        CheckVersion();
         configWindowBW.webContents.closeDevTools();
     }
     //#endregion configWindow
@@ -470,6 +472,7 @@ window.onload = () => {
         alert("save!")
         remote.app.exit();
     })
+
     //#endregion 翻译窗口
 
     //开始监听
@@ -1227,6 +1230,25 @@ Array.prototype.remove = function (item) {
         this.splice(index, 1);
     }
 };
-
+/**
+ * 检查版本更新
+ *
+ */
+function CheckVersion() {
+    configWindow.document.getElementById("updateDiv").innerHTML = "检查更新中……";
+    request('GET /repos/{owner}/{repo}/releases/latest', {
+        owner: 'ETWXR9',
+        repo: 'SimpleTranslator'
+    }).then(function (result) {
+        configWindow.document.getElementById("updateDiv").innerHTML = "<b>最新版本为" + result.data.name + " 点击前往github</b>";
+        configWindow.document.getElementById("updateDiv").addEventListener('click', e => {
+            e.preventDefault();
+            remote.shell.openExternal(result.data.html_url);
+        })
+    }, (reason) => {
+        console.log(reason);
+        configWindow.document.getElementById("updateDiv").innerHTML = "检查更新失败";
+    });
+}
 
 //#endregion 其他函数

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy"
-        content="script-src 'unsafe-inline' 'self' 'unsafe-eval'; object-src 'none'; style-src 'self' 'unsafe-inline'; img-src data: 'self' http: https:">
+        content="script-src 'self'  'unsafe-eval'; object-src 'none'; style-src 'self' 'unsafe-inline'; img-src data: 'self' http: https:">
     <title>设置窗口</title>
     <!-- <script type="module" src="./configWindow.js"></script> -->
     <link rel="stylesheet" type="text/css" href="./index.css">
@@ -20,6 +20,7 @@
         <div> 百度翻译id：<input type="text" id="baiduidinput"></div>
         <div> 百度翻译key：<input type="text" id="baidukeyinput"></div>
         <div> <button id="testbaidubtn">测试百度翻译</button></div>
+        <div id = updateDiv>检查更新</div>
     </div>
     <div id="gamediv">
         <div><input type="file" id="gamejsoninput" accept=".json"></div>

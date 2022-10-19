@@ -61,6 +61,48 @@
     "lodash" "^4.17.15"
     "tmp-promise" "^3.0.2"
 
+"@octokit/endpoint@^7.0.0":
+  "integrity" "sha512-57gRlb28bwTsdNXq+O3JTQ7ERmBTuik9+LelgcLIVfYwf235VHbN9QNo4kXExtp/h8T423cR5iJThKtFYxC7Lw=="
+  "resolved" "https://registry.npmmirror.com/@octokit/endpoint/-/endpoint-7.0.3.tgz"
+  "version" "7.0.3"
+  dependencies:
+    "@octokit/types" "^8.0.0"
+    "is-plain-object" "^5.0.0"
+    "universal-user-agent" "^6.0.0"
+
+"@octokit/openapi-types@^14.0.0":
+  "integrity" "sha512-HNWisMYlR8VCnNurDU6os2ikx0s0VyEjDYHNS/h4cgb8DeOxQ0n72HyinUtdDVxJhFy3FWLGl0DJhfEWk3P5Iw=="
+  "resolved" "https://registry.npmmirror.com/@octokit/openapi-types/-/openapi-types-14.0.0.tgz"
+  "version" "14.0.0"
+
+"@octokit/request-error@^3.0.0":
+  "integrity" "sha512-WMNOFYrSaX8zXWoJg9u/pKgWPo94JXilMLb2VManNOby9EZxrQaBe/QSC4a1TzpAlpxofg2X/jMnCyZgL6y7eg=="
+  "resolved" "https://registry.npmmirror.com/@octokit/request-error/-/request-error-3.0.2.tgz"
+  "version" "3.0.2"
+  dependencies:
+    "@octokit/types" "^8.0.0"
+    "deprecation" "^2.0.0"
+    "once" "^1.4.0"
+
+"@octokit/request@^6.2.2":
+  "integrity" "sha512-6VDqgj0HMc2FUX2awIs+sM6OwLgwHvAi4KCK3mT2H2IKRt6oH9d0fej5LluF5mck1lRR/rFWN0YIDSYXYSylbw=="
+  "resolved" "https://registry.npmmirror.com/@octokit/request/-/request-6.2.2.tgz"
+  "version" "6.2.2"
+  dependencies:
+    "@octokit/endpoint" "^7.0.0"
+    "@octokit/request-error" "^3.0.0"
+    "@octokit/types" "^8.0.0"
+    "is-plain-object" "^5.0.0"
+    "node-fetch" "^2.6.7"
+    "universal-user-agent" "^6.0.0"
+
+"@octokit/types@^8.0.0":
+  "integrity" "sha512-65/TPpOJP1i3K4lBJMnWqPUJ6zuOtzhtagDvydAWbEXpbFYA0oMKKyLb95NFZZP0lSh/4b6K+DQlzvYQJQQePg=="
+  "resolved" "https://registry.npmmirror.com/@octokit/types/-/types-8.0.0.tgz"
+  "version" "8.0.0"
+  dependencies:
+    "@octokit/openapi-types" "^14.0.0"
+
 "@sindresorhus/is@^0.14.0":
   "integrity" "sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ=="
   "resolved" "https://registry.npmmirror.com/@sindresorhus/is/-/is-0.14.0.tgz"
@@ -511,6 +553,11 @@
   "integrity" "sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ=="
   "resolved" "https://registry.npmmirror.com/delayed-stream/-/delayed-stream-1.0.0.tgz"
   "version" "1.0.0"
+
+"deprecation@^2.0.0":
+  "integrity" "sha512-xmHIy4F3scKVwMsQ4WnVaS8bHOx0DmVwRywosKhaILI0ywMDWPtBSku2HNxRvF7jtwDRsoEwYQSfbxj8b7RlJQ=="
+  "resolved" "https://registry.npmmirror.com/deprecation/-/deprecation-2.3.1.tgz"
+  "version" "2.3.1"
 
 "detect-node@^2.0.4":
   "integrity" "sha512-T0NIuQpnTvFDATNuHN5roPwSBG83rFsuO+MXXH9/3N1eFbn4wcPjttvjMLEPWJ0RGUYgQE7cGgS3tNxbqCGM7g=="
@@ -966,6 +1013,11 @@
   "integrity" "sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg=="
   "resolved" "https://registry.npmmirror.com/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz"
   "version" "3.0.0"
+
+"is-plain-object@^5.0.0":
+  "integrity" "sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q=="
+  "resolved" "https://registry.npmmirror.com/is-plain-object/-/is-plain-object-5.0.0.tgz"
+  "version" "5.0.0"
 
 "is-stream@^2.0.0":
   "integrity" "sha512-hFoiJiTl63nn+kstHGBtewWSKnQLpyb155KHheA1l39uvtO9nWIop1p3udqPcUd/xbF1VLMO4n7OI6p7RbngDg=="
@@ -1503,6 +1555,11 @@
   "integrity" "sha512-34R7HTnG0XIJcBSn5XhDd7nNFPRcXYRZrBB2O2jdKqYODldSzBAqzsWoZYYvduky73toYS/ESqxPvkDf/F0XMg=="
   "resolved" "https://registry.npmmirror.com/type-fest/-/type-fest-0.13.1.tgz"
   "version" "0.13.1"
+
+"universal-user-agent@^6.0.0":
+  "integrity" "sha512-isyNax3wXoKaulPDZWHQqbmIx1k2tb9fb3GGDBRxCscfYV2Ch7WxPArBsFEG8s/safwXTT7H4QGhaIkTp9447w=="
+  "resolved" "https://registry.npmmirror.com/universal-user-agent/-/universal-user-agent-6.0.0.tgz"
+  "version" "6.0.0"
 
 "universalify@^0.1.0":
   "integrity" "sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg=="

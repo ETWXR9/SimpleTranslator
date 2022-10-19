@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "@electron/remote": "^2.0.8",
+    "@octokit/request": "^6.2.2",
     "clipboard-event": "^1.6.0",
     "easywin": "^0.2.72",
     "node-fetch": "^2.6.7",

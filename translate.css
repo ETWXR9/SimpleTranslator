@@ -26,10 +26,11 @@ body {
     background: linear-gradient(90deg, rgba(20, 20, 188, 0.7) 0%, rgba(0, 212, 255, 0.7) 50%, rgba(20, 20, 188, 0.7) 100%);
     align-items: baseline;
     text-align: center;
-    height: 10%;
+    height: auto;
     flex-grow: 1;
     font-size: 5vh;
     padding-left: 8px;
+    flex-wrap: wrap;
 }
 
 #tooldiv>div {

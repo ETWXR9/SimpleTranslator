@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <!-- <script src="./translate.js"></script> -->
     <link rel="stylesheet" type="text/css" href="./translate.css">
     <meta http-equiv="Content-Security-Policy"
-        content="script-src 'unsafe-inline' 'self' 'unsafe-eval'; object-src 'none'; style-src 'self' 'unsafe-inline'; img-src data: 'self' http: https:">
+        content="script-src 'self'  'unsafe-eval'; object-src 'none'; style-src 'self' 'unsafe-inline'; img-src data: 'self' http: https:">
     <title>翻译窗口</title>
     <script type="module" src="./renderer.js"></script>
 </head>
