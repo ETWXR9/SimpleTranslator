@@ -337,7 +337,7 @@ window.onload = () => {
 
     //#region 翻译窗口
     translateWindowBW = remote.BrowserWindow.getAllWindows()[1];
-    console.log("translateWindowBW " + remote.BrowserWindow.getAllWindows()[1].webContents.getTitle());
+    // console.log("translateWindowBW " + remote.BrowserWindow.getAllWindows()[1].webContents.getTitle());
     gamenamediv = document.getElementById("gamenamediv");
     translatesourcediv = document.getElementById("translatesourcediv");
     starttranslatediv = document.getElementById("starttranslatediv");
@@ -351,7 +351,8 @@ window.onload = () => {
     termsourcediv = document.getElementById("termsourcediv");
     terminput = document.getElementById("terminput");
     termdeletediv = document.getElementById("termdeletediv");
-    resizeTo(screen.width * 0.32, screen.height * 0.3);
+    resizeTo(screen.width * 0.3, screen.height * 0.3);
+    // translateWindowBW.setAspectRatio(2)
     moveTo(screen.width * 0.7, 0);
     //剪贴板更新事件
     clipboardListener.on('change', () => {
@@ -850,7 +851,7 @@ function initTextractorCLI(path) {
             return node.ctx === e.ctx
         });
         if (existedNode) {
-            existedNode.innerText = e.addr + " & " + e.ctx + " & " + e.text;
+            existedNode.innerText = e.text;
         }
         //没有则创建该ctx对应的hooktextdiv
         else {
@@ -859,7 +860,7 @@ function initTextractorCLI(path) {
             let newTextDiv = configWindow.document.createElement("div");
             newTextDiv.className = "hooktextdiv";
             newTextDiv.ctx = e.ctx;
-            newTextDiv.innerText = e.addr + " & " + e.ctx + " & " + e.text;
+            newTextDiv.innerText = e.text;
             //点击文本框后改变背景色，记录到元素属性中，有记录的元素点了后复原
             newTextDiv.addEventListener("click", e => {
                 if (newTextDiv.selected) {
