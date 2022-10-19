@@ -1,0 +1,88 @@
+@font-face {
+    font-family: "WenQuanZhengHei";
+    src: url("./WenQuanZhengHei.ttf") format('truetype');
+}
+
+body {
+    font-family: "微软雅黑","黑体","WenQuanZhengHei";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+#configdiv {
+    flex-basis: 1;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#gamediv {
+    flex-basis: 1;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#configdiv>div {
+    margin-top: 5px;
+}
+
+#gamediv>div {
+    margin-top: 5px;
+}
+
+input {
+    margin-left: 3px;
+    outline-style: auto;
+    border: 1px;
+}
+
+#processselect {
+    width: 100%;
+}
+
+#processtextdiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#processtextdiv>div {
+    flex-grow: 50%;
+    width: 90%;
+    height: auto;
+    max-height: 200px;
+    overflow: auto;
+    margin: 2px;
+    border-style: solid;
+    border-radius: 1px;
+    border-color: 1px;
+    font-size: 14px;
+    /* font-family: 'BabelStoneHan'; */
+}
+
+
+
+#handlertestsourcediv {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    min-height: 100px;
+    word-wrap: normal;
+    overflow: auto;
+}
+
+#handlertestresultdiv {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    min-height: 100px;
+    /* resize: both; */
+    overflow: auto;
+    word-wrap: normal;
+}

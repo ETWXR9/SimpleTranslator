@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src 'unsafe-inline' 'self' 'unsafe-eval'; object-src 'none'; style-src 'self' 'unsafe-inline'; img-src data: 'self' http: https:">
+    <title>设置窗口</title>
+    <!-- <script type="module" src="./configWindow.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="./index.css">
+
+</head>
+
+<body>
+    <div id="configdiv">
+        <div> 腾讯翻译id：<input type="text" id="tencentidinput"></div>
+        <div> 腾讯翻译key：<input type="text" id="tencentkeyinput"></div>
+        <div> <button id="testtencentbtn">测试腾讯翻译</button></div>
+        <div> 百度翻译id：<input type="text" id="baiduidinput"></div>
+        <div> 百度翻译key：<input type="text" id="baidukeyinput"></div>
+        <div> <button id="testbaidubtn">测试百度翻译</button></div>
+    </div>
+    <div id="gamediv">
+        <div><input type="file" id="gamejsoninput" accept=".json"></div>
+        <div>名称：<input type="text" id="gamenameinput"></div>
+        <div>翻译API：
+            <select id="apiinput">
+                <option value="tencent">腾讯翻译</option>
+                <option value="baidu">百度翻译</option>
+            </select>
+        </div>
+        <div>源语言：<input type="text" id="sourceinput" value="auto"></div>
+        <div>目标语言：<input type="text" id="targetinput" value="zh"></div>
+        <div>选择程序
+            <select id="processselect">
+                <option class="processoption" value="null" selected>不选程序，从剪贴板读取文本</option>
+            </select>
+            <div id="processtextdiv">
+            </div>
+        </div>
+        <div>原文处理： <button id="addsourcehandlerbtn">添加</button></br>
+            <div id="sourcehandlerdiv">
+            </div>
+        </div>
+        <div>更新间隔(ms)：<input type="number" id="intervalinput" min="200"></div>
+        <div> <button id="savegamejsonbtn">应用修改并保存</button></div>
+        <div id="handlertestsourcediv"></div>
+        <div id="handlertestresultdiv"></div>
+    </div>
+    </div>
+</body>
+
+</html>

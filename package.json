@@ -1,0 +1,58 @@
+{
+  "name": "simpletranslator",
+  "version": "1.0.0",
+  "author": "etwxr9",
+  "description": "一个简单的翻译器",
+  "build": {
+    "appId": "et.electron.simpletranslator",
+    "productName": "简单翻译器",
+    "copyright": "Copyright © 2022 etwxr9",
+    "directories": {
+      "output": "bulid"
+    },
+    "files": [
+      "!textHandler.js",
+      "!**/node_modules/*",
+      "!TODO.MD",
+      "!gameData",
+      "!game",
+      "!textractor",
+      "!config.json",
+      "!**/bulid/*"
+    ],
+    "asar": false,
+    "win": {
+      "icon": "icon.png",
+      "target": [
+        {
+          "target": "portable"
+        }
+      ]
+    },
+    "portable": {
+      "splashImage": "splashImage.bmp",
+      "useZip": true
+    }
+  },
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "easywin": "^0.2.72",
+    "electron": "^21.0.1",
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.8",
+    "clipboard-event": "^1.6.0",
+    "easywin": "^0.2.72",
+    "node-fetch": "^2.6.7",
+    "tencentcloud-sdk-nodejs": "^4.0.455"
+  },
+  "config": {}
+}
