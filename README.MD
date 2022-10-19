@@ -1,5 +1,6 @@
 
 # 简单翻译器-简介
+
 这个翻译器可以读取剪贴板、或者使用内置的textractor提取游戏文本。它支持百度翻译和腾讯翻译，需要用户自己填写api账号和秘钥。
 
 其实大部分功能其他翻译器都有，我做这个工具主要是为了有如下功能：
@@ -72,3 +73,15 @@
     -正则替换第一个参数是正则表达式，第二个参数是替换结果。
     -单字重复的参数是重复次数
     -字数限制的参数是最大字数
+4. 目前win7无法使用，因为easywin这个包不兼容性win7，之后可能会想办法解决。
+
+# 引用项目
+[easywin](https://www.npmjs.com/package/easywin)
+
+[clipboard-event](https://www.npmjs.com/package/clipboard-event)
+
+[node-fetch](https://www.npmjs.com/package/node-fetch)
+
+[tencentcloud-sdk-nodejs](https://www.npmjs.com/package/tencentcloud-sdk-nodejs)
+
+[Textractor](https://github.com/Artikash/Textractor)
