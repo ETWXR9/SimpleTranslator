@@ -7,32 +7,19 @@
     "appId": "et.electron.simpletranslator",
     "productName": "简单翻译器",
     "copyright": "Copyright © 2022 etwxr9",
-    "directories": {
-      "output": "bulid"
-    },
+    "directories": {"output": "bulid"},
     "files": [
-      "!textHandler.js",
-      "!**/node_modules/*",
-      "!TODO.MD",
-      "!gameData",
-      "!game",
-      "!textractor",
-      "!config.json",
-      "!**/bulid/*"
+      "!textHandler.js", "!**/node_modules/*", "!TODO.MD", "!gameData", "!game", 
+      "!**/textractor/*", "!.gitignore", "!package-lock.json", "!README.MD", 
+      "!config.json", "!yarn.lock", "!yarn-error.log", "!notice.txt", "!**/bulid/*", 
+      "!**/教程/*"
     ],
-    "asar": false,
+    "asar": true,
     "win": {
       "icon": "icon.png",
-      "target": [
-        {
-          "target": "portable"
-        }
-      ]
+      "target": [ {"target": "portable"} ]
     },
-    "portable": {
-      "splashImage": "splashImage.bmp",
-      "useZip": true
-    }
+    "portable": {"splashImage": "splashImage.bmp", "useZip": true}
   },
   "main": "main.js",
   "scripts": {
@@ -42,11 +29,7 @@
     "dist": "electron-builder"
   },
   "license": "ISC",
-  "devDependencies": {
-    "easywin": "^0.2.72",
-    "electron": "^21.0.1",
-    "electron-builder": "^23.6.0"
-  },
+  "devDependencies": {"easywin": "^0.2.72", "electron": "^21.0.1", "electron-builder": "^23.6.0"},
   "dependencies": {
     "@electron/remote": "^2.0.8",
     "@octokit/request": "^6.2.2",

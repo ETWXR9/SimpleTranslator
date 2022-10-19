@@ -1249,6 +1249,14 @@ function CheckVersion() {
         console.log(reason);
         configWindow.document.getElementById("updateDiv").innerHTML = "检查更新失败";
     });
+    request('GET /repos/{owner}/{repo}/contents/{path}', {
+        owner: 'ETWXR9',
+        repo: 'SimpleTranslator',
+        path: 'README.MD'
+    }).then((result) => {
+        console.log("resultName = ");
+        console.log(result)
+    })
 }
 
 //#endregion 其他函数
