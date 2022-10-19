@@ -1252,10 +1252,10 @@ function CheckVersion() {
     request('GET /repos/{owner}/{repo}/contents/{path}', {
         owner: 'ETWXR9',
         repo: 'SimpleTranslator',
-        path: 'README.MD'
+        path: 'notice.txt'
     }).then((result) => {
-        console.log("resultName = ");
-        console.log(result)
+        console.log(result);
+        configWindow.document.getElementById("noticeDiv").innerHTML = "最新公告：" + new Buffer(result.data.content, 'base64');
     })
 }
 
